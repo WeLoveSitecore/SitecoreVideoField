@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <VideoEditor>
+    <FormDialog Width="800px" Header="Video Source Editor" Text="Edit the Source of the Video" Icon="Multimedia/32x32/film_clip_h.png">
+      <CodeBeside Type="Sitecore.Feature.VideoField.Forms.VideoEditorForm, Sitecore.Feature.VideoField" />
+      <Script runat="server">
+        function clearall(){
+        $$('.scComboboxEdit').each(function(e){ e.value=''});
+        }
+      </Script>
+      <div style="width:800px;  overflow: auto; ">
+
+        <GridPanel runat="server" Width="800px"  >
+          <Border runat="server" style="margin-top: 8px;margin-bottom: 2px" GridPanel.Height="50px" GridPanel.VAlign="top" >
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Source One" runat="server"  />
+              </b>
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Edit ID="txtSourceOne"  runat="server" Width="400px"  />
+              <Edit ID="txtHiddenSourceOne"   runat="server" hidden="true" />
+              <Button Header="Media Link" ID="browseSourceOne" runat="server" click="OnBrowseSourceOne" Text="Media Link"/>
+              <Button Header="External Link" ID="browseSourceOneExternal" runat="server" click="OnBrowseSourceOneExternal"/>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Source Two" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Edit ID="txtSourceTwo"  runat="server" Width="400px" />
+              <Edit ID="txtHiddenSourceTwo"   runat="server" hidden="true" />
+              <Button Header="Media Link" ID="browseSourceTwo" runat="server" click="OnBrowseSourceTwo" Text="Media Link"/>
+              <Button Header="External Link" ID="browseSourceTwoExternal" runat="server" click="OnBrowseSourceTwoExternal"/>
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Poster" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Edit ID="txtPoster"  runat="server" Width="400px"/>
+              <Edit ID="txtHiddenPoster"   runat="server" hidden="true" />
+              <Button Header="Media Link" ID="browsePoster" runat="server" click="OnBrowsePoster" Text="Media Link"/>
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Width" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Edit ID="Width"  runat="server" />
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Height" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Edit ID="Height"  runat="server" />
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Show Controls" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Checkbox ID="chbControls"  runat="server" />
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Loop" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Checkbox ID="chbLoop"  runat="server" />
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Auto Play" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Checkbox ID="chbAutoPlay"  runat="server" />
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Muted" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Checkbox ID="chbMuted"  runat="server" />
+            </Border>
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <b>
+                <Literal Text="Preload" runat="server" />
+              </b>
+            </Border>
+
+
+            <Border runat="server" style="margin-bottom: 2px">
+              <Checkbox ID="chbPreload"  runat="server" />
+            </Border>
+
+
+          </Border>
+
+
+        </GridPanel>
+
+      </div>
+      <Border def:placeholder="Buttons" runat="server">
+        <Button Header="Clear all" runat="server"  Type="button" Click="OnClear" />
+      </Border>
+
+    </FormDialog>
+  </VideoEditor>
+</control>

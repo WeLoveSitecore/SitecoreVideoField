@@ -1,0 +1,1 @@
+C:\projects\Habitat\src\Feature\CustomFields\Sitecore.Featur.VideoField\obj\Release\Sitecore.Feature.VideoField.csprojResolveAssemblyReference.cache

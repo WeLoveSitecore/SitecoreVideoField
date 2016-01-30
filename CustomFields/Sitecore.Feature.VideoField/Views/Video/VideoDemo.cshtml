@@ -1,0 +1,10 @@
+﻿@using System.Security.Policy
+@using Sitecore.Data
+@using Sitecore
+@using Sitecore.Feature.VideoField.Extensions
+<div id="visit-details" class="panel panel-primary">
+
+    @Html.Sitecore().VideoField("Video", @Sitecore.Context.Item)  
+</div>
+
+ 
